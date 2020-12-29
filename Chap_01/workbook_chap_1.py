@@ -1,93 +1,14 @@
-import math
 
-""" # Area circle and volume sphere
 
-# Read the radius from user
-raggio = float(input("Inserisci il raggio: "))
 
-# Compute area and volume
-area = math.pi * (raggio ** raggio)
-volume = (4 / 3) * math.pi * pow(raggio, 3)
 
-# Display the results
-print("Area del cerchio: %.2f" % area)
-print("Volume della sfera: %.2f" % volume) """
 
-""" # Heat Capacity
 
-# Read the mass of water and the temperature change
-mass_water = float(input("Inserisci la quantità d'acqua in ml: "))
-temperature = float(input("Inserisci il cambio di temperatura desiderato in gradi Celsius: "))
 
-# Define constants for heat capacity and electricity costs
-HEAT_CAPACITY = 4.186
-ELEC_COST = 8.9 # cents
-J_TO_KWH = 2.777e-7
 
-# Compute energy needed
-energy_needed = mass_water * temperature * HEAT_CAPACITY
 
-# Conversion in kwh
-kwh = energy_needed * J_TO_KWH
 
-# Compute the cost of energy
-cost = kwh * ELEC_COST
 
-# Display the results
-print("Energia necessaria: %d Joule" % energy_needed)
-print("Costo riscaldamento acqua: %.2f cents" % cost) """
-
-""" # Volume of a Cylinder
-
-# Read radius and height from user
-radius = float(input("Inserire il raggio: "))
-height = float(input("Inserire l'altezza: "))
-
-# Compute base area and volume
-area = math.pi * pow(radius, 2)
-volume = area * height
-
-# Display the result
-print("Volume cilindro: %.1f" % volume) """
-
-""" # Free fall
-
-# Constant of acceleration due to gravity
-GRAVITY = 9.8
-
-# Read the height from witch the object is dropped from user
-height = float(input("Inserire l'altezza in metri: "))
-
-# Compute final speed
-velocita_finale = math.sqrt(2 * height * GRAVITY)
-
-# Display the result
-print("Velocità al momento dell'impatto: %.2f m/s" % velocita_finale) """
-
-""" # Area of a Triangle (3 sides)
-
-# Read the sides from user
-s1, s2, s3 = input("Inserisci i 3 lati: ").split()
-s1,s2,s3 = [float(s1), float(s2), float(s3)]
-
-# Compute the area
-s = (s1 + s2 + s3) / 2
-area = math.sqrt(s * (s - s1) * (s - s2) * (s - s3))
-
-# Display the result
-print("Area del triangolo: %.2f" % area) """
-
-""" # Area of a regular polygon
-
-# Read the length of a side and the number of the sides
-length_sides, num_sides = input("Inserisci la lunghezza dei lati ed il loro numero \nseparati da uno spazio: ").split()
-length_sides, num_sides = [float(length_sides), int(num_sides)]
-
-# Compute the area of the polygon
-area = (num_sides * (length_sides ** 2)) / (4 * math.tan(math.pi / num_sides))
-
-# Display the result
-print("Area del poligono: %.2f" % area) """
 
 """ # Units of Time
 
