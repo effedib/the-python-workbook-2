@@ -1,42 +1,4 @@
 import math
-
-"""
-#write a complete mailing address of a person
-
-mail_address = "Francesco Di Bella\nVia Della Sibilla 29 pal. E,\n95123, Catania"
-print(mail_address)
-"""
-
-""" # Area of a room
-
-width = float(input("Inserisci la larghezza della stanza: "))
-length = float(input("Inserisci la lunghezza della stanza: "))
-area = (width * length)
-print("L'area della stanza è pari a %.2f metri" % area) """
-
-""" # Area of a Field
-
-width = float(input("Inserisci la larghezza campo in metri: "))
-length = float(input("Inserisci la lunghezza del campo in metri: "))
-acri = (width * length) / 4046.86
-print("L'area del campo è pari a %.2f acri" % acri) """
-
-""" # Bottle deposits
-
-# Conversion rate
-LESS_LITER = 0.10
-MORE_LITER = 0.25
-
-# Read the number of containers from user
-less_liter = int(input("How many containers until 1 liter? "))
-more_liter = int(input("How many containers have more than 1 liter? "))
-
-# Compute refund
-refund = (less_liter * LESS_LITER) + (more_liter * MORE_LITER)
-
-# Display the results
-print("Prevision refund: $%.2f" % refund) """
-
 """ # Tax and Tip
 
 # Compute tax and tip based on the cost of a meal oredered at restaurant
