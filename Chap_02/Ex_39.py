@@ -17,5 +17,5 @@ elif month in ['april', 'june', 'september', 'november']:
     day = 30
 else:
     day = 31
-print("Days of the month: " + str(day))
+print("Days of the month: {}".format(day))
         
