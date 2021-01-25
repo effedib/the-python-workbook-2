@@ -25,15 +25,11 @@ tax_bill        = charges_bill * TAX
 total_bill      = charges_bill + tax_bill
 
 # Display the results
-""" print(
-    "Base Charge: {:.2f}\nAdditional Minutes: {:.2f}\nAdditional Text Messages: {:.2f}\n911 Fee: {:.2f}\nTax: {:.2f}\nTotal Bill Amount: {:.2f}"\
-    .format(BASE_CHARGE, extra_minutes, extra_messages, SUPPORT_CALLS, tax_bill, total_bill)
-) """
-print("Base Charge: {:.2f}".format(BASE_CHARGE).rjust(30))
+print("{:30}{:>5.2f}".format("Base Charge: ", BASE_CHARGE))
 if extra_minutes > 0:
-    print("Additional Minutes: {:.2f}".format(extra_minutes).rjust(30))
+    print("{:30}{:>5.2f}".format("Additional Minutes: ", extra_minutes))
 if extra_messages > 0:
-    print("Additional Text Messages: {:.2f}".format(extra_messages).rjust(30))
-print("911 Fee: {:.2f}".format(SUPPORT_CALLS).rjust(30))
-print("Tax: {:.2f}".format(tax_bill).rjust(30))
-print("Total Bill Amount: {:.2f}".format(total_bill).rjust(30))
+    print("{:30}{:>5.2f}".format("Additional Text Messages: ",extra_messages))
+print("{:30}{:>5.2f}".format("911 Fee: ", SUPPORT_CALLS))
+print("{:30}{:>5.2f}".format("Tax: ", tax_bill))
+print("{:30}{:>5.2f}".format("Total Bill Amount: ", total_bill))
