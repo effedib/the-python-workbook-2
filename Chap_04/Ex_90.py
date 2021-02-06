@@ -2,9 +2,9 @@
 
 # This function displays the complete lyrics for The Twelve Days of Christmas song.
 
-from Ex_89 import OrdinalNumber
-
 def TwelveDaysChristmas(num: int) -> str:
+    from Ex_89 import OrdinalNumber
+    
     gifts = {
          0: 'A partridge in a pear tree',
          1: 'And a partridge in a pear tree',

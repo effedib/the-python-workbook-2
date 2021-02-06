@@ -1,7 +1,6 @@
 # Gregorian Date to Ordinal Date
 
 # This function take three integers as parameters and returns the day within the year for that date
-from math import floor
 
 def isLeap(year: int) -> bool:
     if (year % 400) == 0:
@@ -16,6 +15,8 @@ def isLeap(year: int) -> bool:
     return isLeap
 
 def ordinalDate(day: int, month: int, year: int) -> str:
+    from math import floor
+    
     if month == 1 or month == 2:
         month += 12
         day   -= 365
@@ -30,7 +31,9 @@ def ordinalDate(day: int, month: int, year: int) -> str:
     return "{}-{:03d}".format(year, ordinalDay)
 
 def main():
-    print(ordinalDate(3, 3, 2017))
+    day, month, year = input("Enter the date (use the format DD-MM-YYYY): ").split('-')
+    day, month, year = (int(day), int(month), int(year))
+    print(ordinalDate(day, month, year))
 
 if __name__ == "__main__":
     main()

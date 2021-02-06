@@ -2,9 +2,9 @@
 
 # This function takes the lengths of the two shorter sides of a right triangle as its parameters and returns the hypotenuse computed using the Pythagorean theorem.
 
-from math import sqrt
-
 def hypotenuse(side1: float, side2: float) -> float:
+    from math import sqrt
+    
     hyp = sqrt(side1 ** 2 + side2 ** 2)
 
     return hyp
