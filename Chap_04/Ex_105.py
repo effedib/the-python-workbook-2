@@ -50,13 +50,17 @@ def baseconvert(number, new_base = 10, base_orig = 10):
         return "Incorrect base number"
 
 
+def main():
 
-print(binary2decimal(10101))
-print(decimal2binary(21))
-print(hex2int('a'))
-print(int2hex('15'))
+    print(binary2decimal(10101))
+    print(decimal2binary(21))
+    print(hex2int('a'))
+    print(int2hex('15'))
 
-print(baseconvert(10101, 10, 2))
-print(baseconvert(21, 12))
-print(baseconvert('a', 10, 16))
-print(baseconvert('15', 16))
+    print(baseconvert(10101, 10, 2))
+    print(baseconvert(21, 12))
+    print(baseconvert('a', 10, 16))
+    print(baseconvert('15', 16))
+
+if __name__ == "__main__":
+    main()
