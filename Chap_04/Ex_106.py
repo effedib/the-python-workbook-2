@@ -1,8 +1,7 @@
 # Days in a Month
 
-from Ex_91 import isLeap
-
 def dayin1month(month: int, year: int) -> int:
+    from Ex_91 import isLeap
 
     if month in [4, 6, 9, 11]:
 
