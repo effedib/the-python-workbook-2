@@ -4,7 +4,7 @@
 
 from random import choices
 
-coins = ['H', 'T']
+coins = ('H', 'T')
 
 counter_tot = 0
 for i in range(10):
