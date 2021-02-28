@@ -12,8 +12,8 @@ while i < ((len(word) - 1) / 2):
     if word[i] != word[final]:
         is_palindrome = False
         break
-    i       += 1
-    final   -= 1
+    i += 1
+    final -= 1
 
 if is_palindrome is False:
     print("This word is not a palindrome!")

@@ -1,6 +1,7 @@
 # Multiple Word Palindromes
 
-# Extend the solution to EX 75 to ignore spacing, punctuation marks and treats uppercase and lowercase as equivalent in a phrase
+# Extend the solution to EX 75 to ignore spacing, punctuation marks and treats uppercase and lowercase as equivalent
+# in a phrase
 
 # Make a tuple to recognize only the letters
 letters = (
@@ -25,8 +26,8 @@ while i < final:
     if new_phrase[i] != new_phrase[final]:
         is_palindrome = False
         break
-    i       += 1
-    final   -= 1
+    i += 1
+    final -= 1
 
 if is_palindrome is False:
     print("This phrase is not a palindrome!")
