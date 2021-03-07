@@ -8,6 +8,10 @@ def isInteger(string: str) -> bool:
         return False
     
     elif string[0] == '+' or string[0] == '-':
+        if len(string) == 1:
+
+            return False
+
         for i in string[1:]:
             if not i.isdigit():
             

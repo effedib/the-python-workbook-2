@@ -7,20 +7,23 @@ def tokenbystring(string: str) -> list:
     tokens = []
     dgt = ''
     for s in string:
-        if s in ['*', '/', '^', '+', '-']:
-            tokens.append(dgt)
+        if s in ['*', '/', '^', '+', '-', '(', ')']:
+            if dgt != '':
+                tokens.append(dgt)
             dgt = ''
             tokens.append(s)
         elif 0 <= int(s) <= 9:
             dgt += s
+            if s == string[len(string)-1]:
+                tokens.append(dgt)
 
     return tokens
 
 
 def main():
-    exp = input("Enter a mathematical expressione: ")
-    print('The token are: {}'.format(exp))
-    '52 + 3 - 86 * 936 / 2'
+    # exp = input("Enter a mathematical expressione: ")
+    exp = '52 + 3 - 86 * (936 / 2)'
+    print('The tokens are: {}'.format(tokenbystring(exp)))
 
 
 if __name__ == "__main__":
