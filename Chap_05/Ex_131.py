@@ -8,10 +8,11 @@ from Ex_129 import tokenbystring
 from Ex_130 import unary
 
 
-def infix2postfix(tokens: list) -> list:
+def infix2postfix(string_fun: str) -> list:
+    unary_string = unary(tokenbystring(string_fun))
     operators = []
     postfix = []
-    for t in tokens:
+    for t in unary_string:
         if isInteger(t):
             postfix.append(t)
         elif t in ['*', '/', '^', '+', '-', 'u+', 'u-']:
@@ -34,9 +35,7 @@ def infix2postfix(tokens: list) -> list:
 
 def main():
     string = input("Enter a mathematical expression: ")
-    unary_string = unary(tokenbystring(string))
-    print(unary_string)
-    print("The postfix form of this formula is: {}".format(infix2postfix(unary_string)))
+    print("The postfix form of this formula is: {}".format(infix2postfix(string)))
 
 
 if __name__ == "__main__":
