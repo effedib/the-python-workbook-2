@@ -27,7 +27,7 @@ def main():
     print("Total    Simulated   Expected")
     print("           Percent    Percent")
     for i in range(2, 13):
-        print('{:>5}{:>13.2f}{:>11.2f}'.format(i, percentage[i] * 100, expected[i]))
+        print('{:>5}{:>11.2f} %{:>9.2f} %'.format(i, percentage[i] * 100, expected[i]))
 
 
 if __name__ == "__main__":
