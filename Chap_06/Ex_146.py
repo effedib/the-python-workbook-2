@@ -16,7 +16,7 @@ def generateBingocard():
     for i, c in enumerate(bingo_card):
         for n in range(5):
             # Generate a random number between (1, 15) and step ahead 15 numbers every letter in the dict bingo_card
-            num = randint(1, 15)+(i*15)
+            num = randint(0, 15) + (i * 15)
             while num in bingo_card[c]:
                 num = randint(1, 15) + (i * 15)
             bingo_card[c].append(num)
