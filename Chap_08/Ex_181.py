@@ -15,7 +15,7 @@ def possibleChange(dollars, coins, index=0):
     elif index >= len(coins_list):
         return False
 
-    # print("index '{:.2f}'\t{:.2f} dollars\t{:.2f} coins".format(coins_list[index], dollars, coins))
+    print("index '{:.2f}'\t{:.2f} dollars\t{:.2f} coins".format(coins_list[index], dollars, coins))
 
     if dollars == 0 or coins == 0:
         dollars += coins_list[index]
