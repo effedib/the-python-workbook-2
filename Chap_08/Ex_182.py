@@ -5,7 +5,7 @@
 
 # @param word is the word to check
 # @param sym is the list of symbols to combine to create the word
-# @param result is string to return at the end, initialized as empty string
+# @param result is the string to return at the end, it was initialized as empty string
 # @param index is the index to be increased to iterate the list "sym" calling the recursion
 def combineElements(word: str, sym: list, result: str = "", index: int = 0) -> str:
 
@@ -60,6 +60,7 @@ def main():
         # line = line.replace("\n", "")
         element = element.split(",")
         symbols.append(element[1])
+    file.close()
 
     word_to_check = input("Enter the word to check with element symbols: ")
     print(combineElements(word_to_check, symbols))
