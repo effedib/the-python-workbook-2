@@ -20,8 +20,7 @@ def compressList(string: str) -> list or str:
         # loop to check the string and update lst
         for i, c in enumerate(string):
             if not lst:
-                lst.append(c)
-                lst.append(1)
+                lst = [c, 1]
             else:
                 if string[i] == lst[0]:
                     lst[1] += 1
