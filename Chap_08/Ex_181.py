@@ -19,8 +19,8 @@ def possibleChange(dollars, coins, index=0):
 
     if dollars == 0 or coins == 0:
         dollars += coins_list[index]
-        index += 1
         coins += 1
+        index += 1
         return possibleChange(dollars, coins, index)
 
     elif (dollars / coins) in coins_list:
@@ -39,7 +39,7 @@ def main():
     total = float(input('Enter the total amount: '))
     coin = int(input('How many coins do you want to use? '))
     for i in range(1, (coin+1)):
-        print("{} coins:\t{}".format(i, possibleChange(total, i)))
+        print("{} coins:\t{}".format(coin, possibleChange(total, coin)))
 
 
 if __name__ == "__main__":
