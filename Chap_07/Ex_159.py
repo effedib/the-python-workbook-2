@@ -23,6 +23,9 @@ def random_password(file: str) -> str:
             line = line.rstrip()
             words.append(line.capitalize())
 
+    # close the file
+    fin.close()
+
     # select randomly two words in words list until the length of password is between 8 and 10 chars.
     password = ''
     while not 10 >= len(password) >= 8:
