@@ -25,6 +25,7 @@ def lettergrd2numbergrd(letter_grade: str) -> float:
 
 # Converts grade points to letter grades
 def numbergrd2lettergrd(evaluation: str) -> str:
+
     if float(evaluation) > -1:
         evaluation = round(float(evaluation), 1)
         if evaluation > 4.0:

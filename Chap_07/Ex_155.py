@@ -1,11 +1,11 @@
 # Words tha Occur Most
 
 def onlywordsFile(line: str) -> list:
+
     from re import split
 
     line = line.lower()
 
-    line_lst = []
     line_lst = split('[,.?!:; 0123456789\n]', line)
 
     clean = False

@@ -7,11 +7,12 @@ import os
 # @year_name is the birth year date to find in the name of the file
 # @sex is type of file to check in that year (Boys or Girls)
 # @folder = the folder within to search the files
-# @return a list containing the names
-def readNames(year_name: int, sex: str = 'Boys', folder: str = os.getcwd() + "\BabyNames") -> list:
+# @return a list containing the names or a dict with values the n° of usage
+def readNames(year_name: int, sex: str = 'Boys', folder: str = os.getcwd() + "\BabyNames",
+              use_dict: bool = True) -> list or dict:
 
     # create the name of the file to find
-    file = str(year_name)+'_'+sex+'Names.txt'
+    file = str(year_name) + '_' + sex + 'Names.txt'
 
     # join folder+file to create an absolute path
     path = os.path.join(folder, file)
@@ -21,14 +22,27 @@ def readNames(year_name: int, sex: str = 'Boys', folder: str = os.getcwd() + "\B
     # read and split the file to create a list
     line = fin.read().split()
 
-    # delete the 'non names' elements, all positioned in an odd index
-    for name in line[1:len(line)+1:2]:
-        del line[line.index(name)]
-
     # close the file before to exit the function
     fin.close()
 
-    return line
+    # if use_dict == False
+    if not use_dict:
+        # delete the 'non names' elements, all positioned in an odd index
+        for name in line[1: (len(line) + 1): 2]:
+            del line[line.index(name)]
+
+        # return a list containing only the names
+        return line
+
+    else:
+
+        dictNames = dict()
+        for index, element in enumerate(line[::2]):
+            # find the element after the name using (list.index+1) and re-cast to int
+            dictNames[element] = int(line[line.index(element) + 1])
+
+        # return a dict with values the n° of usage
+        return dictNames
 
 
 def main():
@@ -51,8 +65,8 @@ def main():
 
     if LAST_YEAR >= year >= FIRST_YEAR:
 
-        line_boys = readNames(year, 'Boys')
-        line_girls = readNames(year, 'Girls')
+        line_boys = readNames(year, use_dict=False)
+        line_girls = readNames(year, sex='Girls', use_dict=False)
 
         # if the name is mentioned in both files append to neutral list
         for name in line_boys:
