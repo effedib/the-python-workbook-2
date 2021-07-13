@@ -6,7 +6,7 @@ def onlywordsFile(line: str) -> list:
 
     line = line.lower()
 
-    line_lst = split('[,.?!:; 0123456789\n]', line)
+    line_lst = split('[,.?!:; \'0123456789\n]', line)
 
     clean = False
     while not clean:
