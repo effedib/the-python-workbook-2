@@ -1,4 +1,4 @@
-# Words tha Occur Most
+# Words that Occur Most
 
 def onlywordsFile(line: str) -> list:
 
