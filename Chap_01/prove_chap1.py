@@ -6,13 +6,7 @@ price = float(input('price '))
 total = quantity*price
 print('total ', total)
 
-
-
-
-
-
-
 name = "Francesco"
 name2 = "Attilio"
-quant = 6.998
+quant = 6998
 print("Benvenuti %s e %s, entrate pure se avete mangiato %.2f biscotti" % (name, name2, quant))
